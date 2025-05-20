@@ -53,7 +53,7 @@ function Header() {
 
                 {/* Навигация на десктопе */}
                 <nav className={styles.nav}>
-                    <Link to="/" className={styles.navLink}>Home</Link>
+                    <Link to="/cars_watch" className={styles.navLink}>Home</Link>
                     <Link to="/about" className={styles.navLink}>About</Link>
 
                 </nav>
