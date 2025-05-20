@@ -15,7 +15,7 @@ function App() {
                 <Header />
                 <main className={styles.mainContent}>
                     <Routes>
-                        <Route path="/" element={<Home />} />
+                        <Route path="/cars_watch" element={<Home />} />
                         <Route path="/about" element={<About />} />
                     </Routes>
                 </main>

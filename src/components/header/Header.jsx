@@ -20,7 +20,7 @@ function Header() {
         <header className={styles.header}>
             <div className={styles.container}>
                 <div className={styles.leftBlock}>
-                    <Link to="/" className={styles.logo}>
+                    <Link to="/cars_watch" className={styles.logo}>
                         <Car size={35} className={styles.logoIcon}/>
                         <span className={styles.logoText}>Cars Whatch</span>
                     </Link>
