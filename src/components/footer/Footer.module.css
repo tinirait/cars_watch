@@ -1,0 +1,16 @@
+/* Стиль для футера */
+.footer {
+    background-color: #1f2937; /* Темный фон */
+    color: #e5e7eb; /* Светлый текст */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: auto; /* Это гарантирует, что футер будет внизу */
+}
+
+/* Контейнер футера */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}

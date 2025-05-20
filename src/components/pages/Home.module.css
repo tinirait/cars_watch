@@ -1,0 +1,23 @@
+.homeContainer {
+    max-width: 100%;
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+.homeTitle {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1f2937; /* Тёмно-серый */
+    margin: 0;
+}
+
+.homeDescription {
+    font-size: 18px;
+    color: #4b5563; /* Более светлый серый */
+    margin: 0;
+    max-width: 600px;
+}
