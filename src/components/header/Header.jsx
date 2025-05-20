@@ -65,7 +65,7 @@ function Header() {
             {/* Мобильное меню */}
             {mobileOpen && (
                 <div className={styles.mobileMenu}>
-                    <Link to="/" className={styles.mobileNavLink} onClick={() => setMobileOpen(false)}>Home</Link>
+                    <Link to="/cars_watch" className={styles.mobileNavLink} onClick={() => setMobileOpen(false)}>Home</Link>
                     <Link to="/about" className={styles.mobileNavLink} onClick={() => setMobileOpen(false)}>About</Link>
 
                 </div>
