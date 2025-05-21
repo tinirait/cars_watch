@@ -73,7 +73,7 @@ const formatTimeParts = (totalSeconds) => {
     return { d, h, m, s };
 };
 
-
+// ...весь импорт остаётся без изменений
 
 function CarSlider() {
     const settings = {

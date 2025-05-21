@@ -1,6 +1,8 @@
 import Agregator from "../Agregator";
 import CarSlider from "../CarSlider";
 import styles from "./Home.module.css";
+import TestRequest from "../TestRequest";
+
 
 function Home() {
     return (
@@ -11,6 +13,11 @@ function Home() {
             </p>
             <Agregator />
             <CarSlider />
+
+            {/*Для тестирования запросов*/}
+            <TestRequest />
+
+
 
 
         </div>

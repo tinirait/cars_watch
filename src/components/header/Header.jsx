@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { Car, Menu, X } from "lucide-react";
 import styles from "./Header.module.css";
 
+
 function Header() {
+
     // const [isScrolled, setIsScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
 
