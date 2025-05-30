@@ -4,6 +4,9 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
+
+import CarDetail from  "./components/carDetail/CarDetail";
+
 import styles from "./App.module.css"; // импортируем глобальный стиль
 
 
@@ -17,6 +20,7 @@ function App() {
                     <Routes>
                         <Route path="/cars_watch" element={<Home />} />
                         <Route path="/about" element={<About />} />
+                        <Route path="/car/:id" element={<CarDetail />} /> // Description Cars
                     </Routes>
                 </main>
                 <Footer />

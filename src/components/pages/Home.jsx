@@ -1,7 +1,7 @@
-import Agregator from "../Agregator";
-import CarSlider from "../CarSlider";
+import Agregator from "../agregator/Agregator";
+import CarSlider from "../carSlider/CarSlider";
 import styles from "./Home.module.css";
-import TestRequest from "../TestRequest";
+import DataRequest from "../dataRequest/DataRequest";
 
 
 function Home() {
@@ -15,7 +15,7 @@ function Home() {
             <CarSlider />
 
             {/*Для тестирования запросов*/}
-            <TestRequest />
+            <DataRequest />
 
 
 
