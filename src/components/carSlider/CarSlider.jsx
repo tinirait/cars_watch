@@ -88,49 +88,64 @@ function CarSlider() {
                                 ))}
                             </Slider>
                         </div>
+                        <Link to={`/car/${car.id}/${car.auctionDate}`} className={styles.cardLink}>
+
                         <div className={styles.cardContent}>
-                            <h3 className={styles.title}>
-                                <Link to={`/car/${car.id}`} className={styles.link}>
-                                    {car.title}
-                                </Link>
-                            </h3>
-                            <p className={styles.info}>{car.info}</p>
 
-                            <p className={styles.timer}>
-                                {secondsLeft === 0 ? (
-                                    <>
-                                        <span className={styles.auctionOver}>⛔ Auction is over:</span>
-                                        <span className={styles.timePartRed}>{d}d</span>
-                                        <span className={styles.timePartRed}>{h}h</span>
-                                        <span className={styles.timePartRed}>{m}m</span>
-                                        <span className={styles.timePartRed}>{s}s</span>
-                                    </>
-                                ) : (
-                                    <>
-                                        ⏳ Auction ends in:
-                                        <span className={styles.timePart}>{d}d</span>
-                                        <span className={styles.timePart}>{h}h</span>
-                                        <span className={styles.timePart}>{m}m</span>
-                                        <span className={styles.timePart}>{s}s</span>
-                                    </>
-                                )}
-                            </p>
+                                <div className={styles.itemTags}>
+                                    {car.copart && <span className={styles.tagCopart}>Copart</span>}
+                                    {car.iaai && <span className={styles.tagIAAI}>IAAI</span>}
+                                    {secondsLeft === 0 ? (
+                                        <span className={styles.tagClosed}>Closed auction</span>
+                                    ) : (
+                                        <span className={styles.tagOpen}>Opened auction</span>
+                                    )}
 
-                            <div className={styles.actions}>
-                                {car.currentRate !== null && (
-                                    <div className={styles.infoBox}>
-                                        <div>Current rate:</div>
-                                        <div>${car.currentRate.toLocaleString()}</div>
-                                    </div>
-                                )}
-                                {car.buyNow !== null && (
-                                    <div className={styles.infoBox}>
-                                        <div>Buy now:</div>
-                                        <div>${car.buyNow.toLocaleString()}</div>
-                                    </div>
-                                )}
+                                </div>
+
+
+                                <h3 className={styles.title}>{car.title}</h3>
+
+
+                                <p className={styles.info}>{car.info}</p>
+
+                                <p className={styles.timer}>
+                                    {secondsLeft === 0 ? (
+                                        <>
+                                            <span className={styles.auctionOver}>⛔ Auction is over:</span>
+                                            <span className={styles.timePartRed}>{d}d</span>
+                                            <span className={styles.timePartRed}>{h}h</span>
+                                            <span className={styles.timePartRed}>{m}m</span>
+                                            <span className={styles.timePartRed}>{s}s</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            ⏳ Auction ends in:
+                                            <span className={styles.timePart}>{d}d</span>
+                                            <span className={styles.timePart}>{h}h</span>
+                                            <span className={styles.timePart}>{m}m</span>
+                                            <span className={styles.timePart}>{s}s</span>
+                                        </>
+                                    )}
+                                </p>
+
+                                <div className={styles.actions}>
+                                    {car.currentRate !== null && (
+                                        <div className={styles.infoBox}>
+                                            <div>Current rate:</div>
+                                            <div>${car.currentRate.toLocaleString()}</div>
+                                        </div>
+                                    )}
+                                    {car.buyNow !== null && (
+                                        <div className={styles.infoBox}>
+                                            <div>Buy now:</div>
+                                            <div>${car.buyNow.toLocaleString()}</div>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
-                        </div>
+                        </Link>
+
                     </div>
                 );
             })}

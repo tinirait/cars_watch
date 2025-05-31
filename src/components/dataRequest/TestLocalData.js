@@ -1,6 +1,9 @@
+const today = new Date().toISOString().split("T")[0];
+
 const cars = [
     {
         id: 1,
+        auctionDate: today,
         images: [
             "https://pluto.bid.car/0-41838864/2017-BMW-X5-5UXKR0C36H0V83396-1.jpg",
             "https://pluto.bid.car/0-41838864/2017-BMW-X5-5UXKR0C36H0V83396-2.jpg",
@@ -11,9 +14,13 @@ const cars = [
         timeRemaining: "27:24:15",
         currentRate: 12300,
         buyNow: 18500,
+        copart: true,
+        iaai: false,
+
     },
     {
         id: 2,
+        auctionDate: today,
         images: [
             "https://pluto.bid.car/0-41399099/2017-Audi-Q7-WA1LAAF70HD037732-1.jpg",
             "https://pluto.bid.car/0-41399099/2017-Audi-Q7-WA1LAAF70HD037732-3.jpg",
@@ -24,9 +31,13 @@ const cars = [
         timeRemaining: "01:12:05",
         currentRate: 10000,
         buyNow: null,
+        copart: false,
+        iaai: true,
+
     },
     {
         id: 3,
+        auctionDate: today,
         images: [
             "https://images.bid.cars/041958027_680794e49d276/1969-Plymouth-Road-Runner-RM23H9G130511-1.jpg",
             "https://images.bid.cars/041958027_680794e49d276/1969-Plymouth-Road-Runner-RM23H9G130511-13.jpg",
@@ -37,6 +48,9 @@ const cars = [
         timeRemaining: "00:00:30",
         currentRate: null,
         buyNow: 25000,
+        copart: false,
+        iaai: true,
+
     }
 ];
 

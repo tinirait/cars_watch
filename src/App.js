@@ -20,7 +20,7 @@ function App() {
                     <Routes>
                         <Route path="/cars_watch" element={<Home />} />
                         <Route path="/about" element={<About />} />
-                        <Route path="/car/:id" element={<CarDetail />} /> // Description Cars
+                        <Route path="/car/:id/:auctionDate" element={<CarDetail />} />
                     </Routes>
                 </main>
                 <Footer />

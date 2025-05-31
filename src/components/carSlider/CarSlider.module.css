@@ -158,6 +158,72 @@
 
 
 
+/* Блок с контентом> */
+
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+    /*display: block;*/
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+
+.title {
+    color: #222;
+    transition: color 0.3s;
+}
+
+/* Подсвечиваем только заголовок, когда курсор наведен на весь .cardContent */
+.cardContent:hover .title {
+    color: #007bff; /* синий подсветочный цвет */
+    text-shadow: 0 0 2px rgba(0, 123, 255, 0.4);
+}
+
+
+/* Блок с видом аукциона */
+
+.itemTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 12px;
+    /*padding: 0 0 0px 0px;*/
+}
+
+/* Общий стиль для всех тегов */
+.itemTags span {
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: white;
+
+}
+
+/* Индивидуальные стили */
+.tagCopart {
+    background: #0E5DB8;
+    color: #fff;
+}
+
+.tagIAAI {
+    background-color: #D91E1E;
+    color: #fff;
+}
+
+.tagOpen {
+    background-color: #36a301;
+    color: #333;
+}
+
+.tagClosed {
+    background-color: #D91E1E;
+    color: #fff;
+}
+
+
+
+
+
 
 
 
