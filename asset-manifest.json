@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/cars_watch/static/css/main.d76d7988.css",
-    "main.js": "/cars_watch/static/js/main.d4ddcfb8.js",
+    "main.css": "/cars_watch/static/css/main.16978e41.css",
+    "main.js": "/cars_watch/static/js/main.72c6a976.js",
     "static/js/453.27953716.chunk.js": "/cars_watch/static/js/453.27953716.chunk.js",
     "static/media/slick.svg": "/cars_watch/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/cars_watch/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/cars_watch/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/cars_watch/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cars_watch/index.html",
-    "main.d76d7988.css.map": "/cars_watch/static/css/main.d76d7988.css.map",
-    "main.d4ddcfb8.js.map": "/cars_watch/static/js/main.d4ddcfb8.js.map",
+    "main.16978e41.css.map": "/cars_watch/static/css/main.16978e41.css.map",
+    "main.72c6a976.js.map": "/cars_watch/static/js/main.72c6a976.js.map",
     "453.27953716.chunk.js.map": "/cars_watch/static/js/453.27953716.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d76d7988.css",
-    "static/js/main.d4ddcfb8.js"
+    "static/css/main.16978e41.css",
+    "static/js/main.72c6a976.js"
   ]
 }
