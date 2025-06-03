@@ -7,7 +7,8 @@ import About from "./components/pages/About";
 
 import CarDetail from  "./components/carDetail/CarDetail";
 
-import styles from "./App.module.css"; // импортируем глобальный стиль
+import styles from "./App.module.css";
+import "./global.css";
 
 
 

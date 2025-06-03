@@ -24,13 +24,6 @@
     text-decoration: underline;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
 .title {
     font-size: 32px;
     color: #222;
@@ -40,28 +33,65 @@
 .auctionDate {
     font-size: 14px;
     color: #888;
+    margin-bottom: 20px;
 }
 
-.gallery {
-    display: flex;
-    gap: 14px;
-    overflow-x: auto;
-    margin: 20px 0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-}
-
-.gallery img {
-    height: 220px;
+/* Слайдер */
+.sliderWrapper {
+    margin-bottom: 30px;
     border-radius: 10px;
-    object-fit: cover;
-    flex-shrink: 0;
-    border: 1px solid #ddd;
-    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+.sliderImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: auto;
+}
+
+.mainSlider:hover .arrow {
+    opacity: 1;
+    visibility: visible;
+}
+
+.arrow svg {
+    color: white;
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.3;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+    left: 2px;
+}
+
+.next {
+    right: 2px;
 }
 
 .infoSection {
@@ -106,16 +136,98 @@
     background-color: #6f42c1;
 }
 
-@media (max-width: 600px) {
-    .gallery img {
-        height: 160px;
+@media (max-width: 768px) {
+    .sliderImage {
+        height: 250px;
     }
 
     .title {
         font-size: 24px;
     }
-
-    .sectionTitle {
-        font-size: 18px;
-    }
 }
+
+
+/* Слайдеры */
+.sliderWrapper {
+    margin-bottom: 20px;
+}
+
+.sliderImage {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: zoom-in;
+}
+
+.thumbSlider {
+    margin-top: 10px;
+}
+
+.thumbImage {
+    height: 80px;
+    margin: 0 5px;
+    border-radius: 6px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.2s ease;
+}
+
+.thumbImage:hover {
+    border-color: #007bff;
+}
+
+/* Модальное окно */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modalImage {
+    width: 100%;
+    height: 40%;
+    border-radius: 8px;
+}
+
+.modalClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+
+.sliderImage {
+    cursor: pointer; /* 💡 курсор-рука*/
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sliderImage:hover {
+    transform: scale(1.02); /* небольшой zoom-in эффект */
+    /*opacity: 0.95;*/
+}
+
+
+
+
+

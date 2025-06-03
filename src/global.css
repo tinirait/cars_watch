@@ -1,0 +1,34 @@
+.yarl__thumbnails_thumbnail:hover {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.yarl__thumbnails_thumbnail_active {
+    border-radius: 4px;
+    scroll-margin-inline-start: 0 !important;
+}
+
+
+/* Убираем автоцентрирование и прыжки */
+.yarl__thumbnails_container {
+    justify-content: flex-start !important;
+    scroll-behavior: auto !important;
+    scroll-snap-type: none !important;
+    padding-left: 0 !important;
+}
+
+/* Убираем рамку и подсветку при фокусе */
+.yarl__thumbnail:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Контейнер миниатюр ограничиваем шириной слайда */
+.yarl__thumbnails {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 8px 0;
+    display: flex;
+    justify-content: flex-start !important;
+}
