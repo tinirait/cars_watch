@@ -1,34 +1,37 @@
-.yarl__thumbnails_thumbnail:hover {
-    outline: none !important;
-    border: none !important;
-    box-shadow: none !important;
-}
 
-.yarl__thumbnails_thumbnail_active {
-    border-radius: 4px;
-    scroll-margin-inline-start: 0 !important;
-}
-
-
-/* Убираем автоцентрирование и прыжки */
-.yarl__thumbnails_container {
-    justify-content: flex-start !important;
-    scroll-behavior: auto !important;
-    scroll-snap-type: none !important;
-    padding-left: 0 !important;
-}
-
-/* Убираем рамку и подсветку при фокусе */
-.yarl__thumbnail:focus {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* Контейнер миниатюр ограничиваем шириной слайда */
+/* Контейнер миниатюр (группа) */
 .yarl__thumbnails {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 8px 0;
+    max-width: 100%;              /* подстрой под реальную ширину фото */
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: flex-start !important;
+    padding-left: 0 !important;
 }
+.yarl__thumbnails_container {
+    justify-content: flex-start !important;
+    padding-left: 0 !important;
+    scroll-snap-type: none !important;
+}
+
+.yarl__thumbnails {
+    scroll-behavior: auto !important; /* убираем плавную прокрутку */
+}
+
+.yarl__thumbnails_track {
+    justify-content: start !important; /* убираем автоцентрирование */
+}
+
+
+/* Убираем анимацию прокрутки и auto-centering */
+.yarl__thumbnails {
+    scroll-behavior: auto !important;
+}
+
+.yarl__thumbnails_track {
+    justify-content:end !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+

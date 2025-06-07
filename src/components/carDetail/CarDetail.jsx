@@ -2,12 +2,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import { useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import "yet-another-react-lightbox/plugins/thumbnails.css"; // 👈 важно
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
@@ -34,6 +32,7 @@ function CarDetail() {
     const [mainSlider, setMainSlider] = useState(null);
     const [thumbSlider, setThumbSlider] = useState(null);
     const [lightboxIndex, setLightboxIndex] = useState(-1);
+    const [currentIndex, setCurrentIndex] = useState(0); // Новый state для подсветки
 
     if (!car) return <p>Car not found.</p>;
 
@@ -48,6 +47,7 @@ function CarDetail() {
         ref: setMainSlider,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
+        beforeChange: (_, next) => setCurrentIndex(next), // обновляем текущий индекс
     };
 
     const thumbSettings = {
@@ -58,8 +58,13 @@ function CarDetail() {
         swipeToSlide: true,
         focusOnSelect: true,
         ref: setThumbSlider,
-        centerMode: car.images.length > 4,
+        centerMode: false, // отключаем центрирование, чтобы не показывались "кусочки"
+        variableWidth: true, // фиксированная ширина слайдов
+        infinite: false, // по желанию — отключить бесконечный цикл, чтобы крайние слайды не повторялись
+        // добавь padding: 0, если нужно, но slick сам обычно не даёт отступов
+
     };
+
 
     const lightboxSlides = car.images.map((src) => ({ src }));
 
@@ -94,7 +99,7 @@ function CarDetail() {
                                 <img
                                     src={img}
                                     alt={`Thumbnail ${i}`}
-                                    className={styles.thumbImage}
+                                    className={`${styles.thumbImage} ${i === currentIndex ? styles.activeThumb : ""}`}
                                 />
                             </div>
                         ))}
@@ -124,13 +129,12 @@ function CarDetail() {
             </div>
 
             <Lightbox
-
                 open={lightboxIndex >= 0}
                 close={() => setLightboxIndex(-1)}
                 index={lightboxIndex}
                 slides={lightboxSlides}
                 plugins={[Fullscreen, Thumbnails, Zoom]}
-                animation={{ fade: 400, swipe: 250 }}
+                animation={{ fade: 200, swipe: 550 }}
                 zoom={{ maxZoomPixelRatio: 5, zoomInMultiplier: 2 }}
                 on={{
                     view: ({ index }) => setLightboxIndex(index),
@@ -142,7 +146,18 @@ function CarDetail() {
                     padding: 4,
                     gap: 4,
                     imageFit: "cover",
-                    scrollSnap: false, // ❗️ ключевая строка
+                    scrollSnap: false,
+                    width: 80,
+                    height: 60,
+                    carousel: {
+                        finite: true,
+                        preload: 0,
+                        spacing: 4,
+                        center: false,       // ✅ Не центрирует активную
+                        autoScroll: false,   // ✅ Не скроллит к активной
+                        // 👇 ЭТО КЛЮЧЕВОЙ ПАРАМЕТР
+                        shift: 0,            // ✅ Отключает смещение активной миниатюры
+                    },
                 }}
                 render={{
                     slideHeader: () =>
@@ -166,7 +181,6 @@ function CarDetail() {
                         ) : null,
                 }}
             />
-
         </div>
     );
 }
