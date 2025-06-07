@@ -273,3 +273,111 @@
 
 
 
+/* --- Общие настройки для мобильных --- */
+@media (max-width: 768px) {
+    .detail {
+        margin: 20px 10px;
+        padding: 16px;
+        max-width: 100%;
+    }
+
+    .back {
+        font-size: 14px;
+        padding: 6px 12px;
+        border-radius: 4px;
+    }
+
+    .title {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .auctionDate {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    /* Основной слайдер — уменьшаем высоту */
+    .sliderImage {
+        height: 220px;
+        border-radius: 8px;
+    }
+
+    /* Слайды стрелок делаем чуть меньше и ближе к краю */
+    .arrow {
+        width: 28px;
+        height: 28px;
+        opacity: 0.7;
+    }
+    .arrow:hover {
+        opacity: 1;
+    }
+    .prev {
+        left: 5px;
+    }
+    .next {
+        right: 5px;
+    }
+
+    /* Миниатюры — делаем меньше */
+    .thumbImage {
+        height: 60px;
+        width: 80px;
+        margin: 0 3px;
+    }
+
+    /* Отступы между слайдерами */
+    .sliderWrapper {
+        margin-bottom: 20px;
+    }
+
+    /* Информационный блок — чуть меньше шрифт и меньше отступов */
+    .infoSection {
+        padding-top: 15px;
+    }
+
+    .sectionTitle {
+        font-size: 18px;
+        padding-left: 8px;
+    }
+
+    .price,
+    .buyNow {
+        font-size: 16px;
+    }
+
+    /* Теги */
+    .tags {
+        gap: 6px;
+    }
+
+    .tagCopart,
+    .tagIAAI {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+/* Для супер маленьких экранов (мобильных телефонов) */
+@media (max-width: 400px) {
+    .back {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .sliderImage {
+        height: 180px;
+    }
+
+    .thumbImage {
+        height: 50px;
+        width: 70px;
+        margin: 0 2px;
+    }
+}
+
+
