@@ -35,3 +35,47 @@
 }
 
 
+
+
+.yarl__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* убираем лишние отступы */
+    width: 76px;
+    height: 76px;
+    margin: 0 20px; /* горизонтальные отступы от краёв */
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+/* При наведении — не делаем фон слишком плотным */
+.yarl__button svg {
+    width: 38px;
+    height: 38px;
+    stroke-width: 2.2;
+    margin: 0; /* убираем возможный сдвиг */
+}
+
+@media (max-width: 768px) {
+    .yarl__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: 36px;
+        height: 36px;
+        margin: 0 15px; /* меньше отступы на мобильных */
+        background-color: rgba(0, 0, 0, 0.35);
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+
+    .yarl__button svg {
+        width: 18px;
+        height: 18px;
+        stroke-width: 2.2;
+        margin: 0;
+    }
+}

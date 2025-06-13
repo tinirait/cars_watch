@@ -48,6 +48,7 @@ function CarDetail() {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         beforeChange: (_, next) => setCurrentIndex(next), // обновляем текущий индекс
+
     };
 
     const thumbSettings = {
