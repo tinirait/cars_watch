@@ -87,7 +87,7 @@ function CarDetail() {
                                     alt={`Slide ${i}`}
                                     className={styles.sliderImage}
                                     onClick={() => setLightboxIndex(i)}
-                                    style={{ cursor: "grab", transition: "transform 0.3s ease" }}
+                                    style={{ cursor: "grab", transition: "transform 0.3s ease" , transform: "none"  /* убрать масштабирование */}}
                                 />
                             </div>
                         ))}
