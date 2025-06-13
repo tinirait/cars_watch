@@ -315,10 +315,10 @@
         opacity: 1;
     }
     .prev {
-        left: 5px;
+        left: 2px;
     }
     .next {
-        right: 5px;
+        right: 2px;
     }
 
     /* Миниатюры — делаем меньше */
